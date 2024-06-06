@@ -1,14 +1,22 @@
-.add-btn {
+.btn {
   border: none;
   border-radius: 5px;
-  background-color: rgb(43, 43, 137);
-  color: white;
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
+.add-btn {
+  background-color: rgb(43, 43, 137);
+  color: white;
+}
+
 .add-btn:hover {
-  color: brown;
+  color: rgb(43, 43, 137);
   background-color: white;
+}
+
+.delete-btn {
+  background-color: #AE0000;
+  color: white;
 }

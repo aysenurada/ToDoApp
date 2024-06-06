@@ -1,27 +1,14 @@
-import { useState } from 'react';
 import Title from '../Title/Title';
 import AddItem from '../AddItem/AddItem';
 import List from '../List/List';
 import Subtitle from '../Subtitle/Subtitle';
 import './ToDoApp.css';
-
-
+import { useContext } from 'react';
+import { ToDoContext } from '../../store/ToDoContext';
 
 const ToDoApp = () => {
-  // const Items = [
-  //   {
-  //     id: 0,
-  //     completed: false,
-  //     description: 'elma ye'
-  //   },
-  //   {
-  //     id: 1,
-  //     completed: false,
-  //     description: 'armut ye'
-  //   }
-  // ];
-  
-  const items = useState([]);
+
+  const {todos} = useContext(ToDoContext);
 
   return (
     <div className="toDoApp">
@@ -29,9 +16,13 @@ const ToDoApp = () => {
         <Title/>
       </header>
       <main className="content">
-        <AddItem items={items}/>
-        <Subtitle/>
-        <List items={items}/>
+        <AddItem />
+        { todos.length > 0 &&
+          <>
+            <Subtitle/>
+            <List/>
+          </>
+        }
       </main>
     </div>
   );

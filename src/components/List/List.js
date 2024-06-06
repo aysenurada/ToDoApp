@@ -1,19 +1,17 @@
+import { useContext } from "react";
+import { ToDoContext } from "../../store/ToDoContext";
 import ListItem from "../ListItem/ListItem";
 import './List.css';
 
-const List = ({items}) => {
-  const [state, setState] = items;
-
-
+const List = () => {
+  const {todos} = useContext(ToDoContext);
   return (
     <div className="list">
       {
-       state && state.map(
-        (item) => 
-        (<div>{item.description}</div>)
+       todos && todos.map( todo => 
+          <ListItem todo={todo} key={todo.id}/>
         )
       }
-      <ListItem/>
     </div>
   );
 }
