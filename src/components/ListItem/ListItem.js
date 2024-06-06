@@ -34,7 +34,7 @@ const ListItem = ({todo}) => {
     return (
       <div className='list-item'>
         <CheckBox id={todo.id} checked={todo.completed} onChange={handleOnChange}/>
-        <TextBox value={todo.text}  onChange={handleInputChange}/>
+        <TextBox value={todo.text} onChange={handleInputChange} style={{textDecoration: 'overline'}}/>
         <Button className='delete-btn' onClick={handleOnClick}>Delete</Button>
       </div>
     );

@@ -3,3 +3,7 @@
     flex-direction: row;
     gap: 8px;
 }
+
+.underlined {
+    text-decoration: overline;
+}

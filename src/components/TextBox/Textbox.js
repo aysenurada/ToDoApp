@@ -1,9 +1,9 @@
 import './TextBox.css';
 
-const TextBox = ({type, placeholder, ...props}) => {
+const TextBox = ({type, placeholder, reference, ...props}) => {
 
   return (
-    <input type={type} className='input-box' placeholder={placeholder} ref={props.reference} {...props}/>
+    <input type={type} className='input-box' placeholder={placeholder} ref={reference} {...props}/>
   );
 }
 

@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import TextBox from "../TextBox/Textbox";
 import Button from "../Button/Button";
 import { ToDoContext } from "../../store/ToDoContext";
@@ -6,7 +6,11 @@ import './AddItem.css';
 
 const AddItem = () => {
   const inputAddItem = useRef();
-  const {todos, dispatch} = useContext(ToDoContext);
+  const {dispatch} = useContext(ToDoContext);
+
+  useEffect(() => {
+    inputAddItem.current.focus();
+  }, [])
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -17,6 +21,8 @@ const AddItem = () => {
     });
 
     inputAddItem.current.value = '';
+    
+    inputAddItem.current.focus();
   }
   
   return (
