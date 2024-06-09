@@ -1,4 +1,7 @@
 .subtitle {
+    position: relative;
+    left: 23px;
     margin: 0;
     width: 100%;
+    color: #085189;
 }

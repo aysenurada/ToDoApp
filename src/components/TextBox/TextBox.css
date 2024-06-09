@@ -1,8 +1,13 @@
 .input-box {
-  border: 1px solid rgb(32, 32, 116);
+  border: none;
   border-radius: 4px;
   padding: 0 16px;
   height: 40px;
   font-size: 14px;
   width: 400px;
+  background-color: rgb(249, 248, 255);
+}
+
+.input-box:focus {
+  outline: none;
 }

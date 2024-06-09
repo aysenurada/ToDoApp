@@ -2,21 +2,26 @@
   border: none;
   border-radius: 5px;
   padding: 8px 16px;
+  width: 115px;
   cursor: pointer;
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .add-btn {
-  background-color: rgb(43, 43, 137);
+  background-color: #0476D0;
   color: white;
 }
 
 .add-btn:hover {
-  color: rgb(43, 43, 137);
-  background-color: white;
+  background-color: #045797;
+  color: white;
 }
 
 .delete-btn {
-  background-color: #AE0000;
+  background-color: #ED7377;
   color: white;
+}
+
+.delete-btn:hover {
+  background-color: #E32227;
 }

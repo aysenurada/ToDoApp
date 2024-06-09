@@ -1,8 +1,8 @@
 import './CheckBox.css';
 
-const CheckBox = ({id, ...props}) => {
+const CheckBox = ({className, id, ...props}) => {
   return (
-    <input type='checkbox' {...props}/>
+    <input type='checkbox' className='checkbox' {...props}/>
   );
 }
 
