@@ -1,7 +1,6 @@
 .toDoApp {
     height: 100%;
     border-radius: 5px;
-    overflow: hidden;
 }
 
 .toDoApp .header {
